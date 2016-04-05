@@ -1,0 +1,7 @@
+
+	<h3>Valiku tulemus</h3>
+    <p>
+	    <?php if ( isset($_POST["pilt"]) && !empty($_POST["pilt"])) {?> Kasutaja valis pildi nr : 
+		<?php echo htmlspecialchars($_POST["pilt"]);
+	    }else echo " Kasutaja ei valinud pilti"; ?>
+	</p>
