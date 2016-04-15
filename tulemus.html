@@ -1,7 +1,13 @@
 
 	<h3>Valiku tulemus</h3>
     <p>
-	    <?php if ( isset($_POST["pilt"]) && !empty($_POST["pilt"])) {?> Kasutaja valis pildi nr : 
-		<?php echo htmlspecialchars($_POST["pilt"]);
+	    <?php if ( isset($_SESSION["pilt"]) ) {?> Kasutaja valis pildi nr : 
+		<?php echo htmlspecialchars($_SESSION["pilt"]);
 	    }else echo " Kasutaja ei valinud pilti"; ?>
+		
+	 <form method="post" action="?">
+     <input type="submit" value="Sessiooni lõpetamine" name="submit2"> 
+     </form>
+
+		
 	</p>
