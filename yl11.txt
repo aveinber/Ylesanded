@@ -1,0 +1,27 @@
+CREATE TABLE aveinber_loomaaed (
+	id integer PRIMARY KEY auto_increment,
+	nimi varchar(100) NOT NULL,
+	vanus integer,
+	liik varchar(20),
+	puur integer
+);
+
+
+INSERT INTO aveinber_loomaaed VALUES (NULL, 'Tom', 3, 'tiiger', 2);
+
+INSERT INTO aveinber_loomaaed VALUES 
+(NULL,'Leopold', 2, 'leopard', 8), 
+(NULL,'Tibu', 1, 'kana', 3),
+(NULL,'Simba', 5, 'lovi', 8),
+(NULL,'Tapi', 3, 'hobune', 7),
+(NULL,'Takk', 5, 'hobune', 7),
+(NULL,'Staar', 4, 'hobune', 10),
+(NULL,'Leo', 2, 'lovi', 8); 
+
+
+SELECT nimi, puur FROM aveinber_loomaaed WHERE puur=7;
+SELECT min(vanus) as noorim, max(vanus)as vanim FROM aveinber_loomaaed;
+SELECT puur, count(*) as loomi_puuris FROM aveinber_loomaaed GROUP BY puur;
+UPDATE aveinber_loomaaed SET vanus=vanus+1 ;
+
+
