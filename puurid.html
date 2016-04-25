@@ -1,0 +1,15 @@
+<?php
+/*echo "<pre>";
+print_r($puurid);
+echo "</pre>";
+*/?>
+<br/>
+<?php foreach($puurid as $id1=>$puur){ ?>
+<div>
+   <h5>Puur <?php echo $id1; ?></h5>
+			<?php foreach($puur as $id2=>$loom){ ?>
+				<img src="<?php echo $loom['liik']?>">
+			<?php } ?>
+  <?php// print_r($puur);?>
+</div>	
+<?php } ?>
