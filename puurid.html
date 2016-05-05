@@ -1,15 +1,10 @@
-<?php
-/*echo "<pre>";
-print_r($puurid);
-echo "</pre>";
-*/?>
-<br/>
-<?php foreach($puurid as $id1=>$puur){ ?>
-<div>
-   <h5>Puur <?php echo $id1; ?></h5>
-			<?php foreach($puur as $id2=>$loom){ ?>
-				<img src="<?php echo $loom['liik']?>">
-			<?php } ?>
-  <?php// print_r($puur);?>
-</div>	
-<?php } ?>
+<?php if (!empty($puurid)):?>
+	<?php foreach($puurid as $pid=>$puur): ?>
+		<div class="puur">
+			<h5>Puur <?php echo $pid; ?></h5>
+			<?php foreach($puur as $lid=>$loom): ?>
+				<img src="<?php echo $loom['liik']; ?>" alt="<?php echo $loom['nimi']; ?>" title="<?php echo $loom['nimi']; ?>">
+			<?php endforeach; ?>
+		</div>
+	<?php endforeach; ?>
+<?php endif;?>
